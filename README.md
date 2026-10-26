@@ -14,6 +14,45 @@ This project applies **Inferential Statistics** to health-related data to unders
 * Calculate covariance and correlation between numerical variables.
 * Interpret statistical results and draw conclusions.
 
+## Files
+- `Derivable_Judgement.ipynb` — full analysis notebook
+- `derivable_judgement_dataset.csv` — generated dataset
+- `Theory_Notes.pdf` — Part A theory notes with definitions
+- `README.md` — project documentation
+- `images/` — all labelled charts
+
+## Statistical Methods
+
+The following statistical methods were used to analyze the health dataset:
+
+- **One-Proportion Z-Test:** Used to compare the observed diabetes prevalence with a hypothesized prevalence of 25%.
+- **Two-Proportion Z-Test:** Used to compare diabetes proportions between smokers and non-smokers.
+- **Welch's Independent-Samples t-Test:** Used to compare glucose levels between individuals with and without diabetes.
+- **Chi-Square Test of Independence:** Used to examine the association between smoking status and diabetes.
+- **One-Way ANOVA:** Used to compare blood pressure across different age groups.
+- **Pearson Correlation:** Used to measure the strength and direction of the linear relationship between age and BMI, and between BMI and blood pressure.
+- **95% Confidence Interval:** Used to estimate a plausible range for the population diabetes prevalence.
+- **Cramér's V:** Used to measure the strength of the association between smoking status and diabetes.
+
+## 📈 Key Results
+
+| Test | Statistic | p-value | Decision |
+| --- | --- | --- | --- |
+| One-proportion Z-test (prevalence = 0.25) | z = 4.714 | 2.4 × 10⁻⁶ | Reject H₀ |
+| Two-proportion Z-test (smoker vs non-smoker) | z = 6.744 | 1.6 × 10⁻¹¹ | Reject H₀ |
+| Welch's t-test (glucose by diabetes status) | t ≈ 36.0 | < 1 × 10⁻¹⁰⁰ | Reject H₀ |
+| Chi-square test (smoking × diabetes) | χ² = 58.05 | 2.5 × 10⁻¹³ | Reject H₀ |
+| One-way ANOVA (blood pressure by age group) | F ≈ 63 | < 1 × 10⁻³⁰ | Reject H₀ |
+| Pearson correlation (age vs BMI) | r = 0.02 | 0.62 | Fail to reject H₀ |
+| Pearson correlation (BMI vs blood pressure) | r = 0.36 | ≈ 1 × 10⁻²⁰ | Reject H₀ |
+
+## Additional Findings
+
+- **Diabetes Probability Among Smokers:** 0.450 (45.0%)
+- **Diabetes Probability Among Non-Smokers:** 0.160 (16.0%)
+- **95% Confidence Interval for Diabetes Prevalence:** (0.296, 0.371)
+- **Cramér's V:** 0.311, indicating a moderate association between smoking status and diabetes.
+
 ## 📂 Dataset Description
 
 The project uses a health records dataset containing 500 records and 15 columns.
@@ -38,85 +77,6 @@ The project uses a health records dataset containing 500 records and 15 columns.
 * NumPy
 * SciPy
 
-## 📊 Project Tasks
-
-### Part A – Theoretical Foundation
-
-The notebook covers these statistical concepts:
-
-1. Inferential Statistics
-2. Hypothesis Testing and Its Components
-3. Confidence Interval and Critical Value
-4. P-value
-5. Type I and Type II Errors
-6. Z-test, T-test, Chi-square Test, and ANOVA
-7. Covariance
-8. Correlation
-
-### Part B – Data Analysis and Testing
-
-**1. Hypothesis Formulation**
-
-* Smoking status and diabetes prevalence
-* Exercise frequency and diabetes prevalence
-
-**2. Confidence Interval**
-
-* Calculate a confidence interval for age.
-
-**3. Critical Value and P-value**
-
-* Calculate and interpret these values for statistical testing.
-
-**4. T-test**
-
-* Compare BMI between individuals with diabetes and without diabetes.
-
-**5. Chi-square Test**
-
-* Examine the relationship between smoking status and hypertension.
-
-**6. ANOVA Test**
-
-* Compare BMI across different age groups.
-
-**7. Covariance and Correlation**
-
-* Analyze the relationship between age and BMI.
-
-**8. Result Interpretation**
-
-* Interpret the statistical outputs and state conclusions based on the tests performed.
-
-## 📈 Key Findings
-
-The analysis includes:
-
-* A 95% confidence interval for age.
-* A comparison of BMI between diabetes groups using a t-test.
-* A chi-square analysis of smoking status and hypertension.
-* An ANOVA comparison of BMI across age groups.
-* Covariance and correlation analysis between age and BMI.
-
-The notebook provides the numerical results and interpretations for these analyses.
-
-## 🚀 How to Run the Project
-
-1. Clone or download this repository.
-2. Install the required Python libraries:
-
-```bash
-pip install pandas numpy scipy matplotlib jupyter
-```
-
-3. Open Jupyter Notebook:
-
-```bash
-jupyter notebook
-```
-
-4. Open the project notebook and run the cells in order.
-5. Make sure the dataset file is available at the path specified in the notebook.
 
 ## 📚 Concepts Covered
 
