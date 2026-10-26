@@ -29,29 +29,26 @@ The following statistical methods were used to analyze the health dataset:
 - **Two-Proportion Z-Test:** Used to compare diabetes proportions between smokers and non-smokers.
 - **Welch's Independent-Samples t-Test:** Used to compare glucose levels between individuals with and without diabetes.
 - **Chi-Square Test of Independence:** Used to examine the association between smoking status and diabetes.
-- **One-Way ANOVA:** Used to compare blood pressure across different age groups.
-- **Pearson Correlation:** Used to measure the strength and direction of the linear relationship between age and BMI, and between BMI and blood pressure.
-- **95% Confidence Interval:** Used to estimate a plausible range for the population diabetes prevalence.
-- **Cramér's V:** Used to measure the strength of the association between smoking status and diabetes.
+- **One-Way ANOVA:** Used to compare blood pressure across five age groups.
+- **Pearson Correlation:** Used to measure the strength and direction of linear relationships between numerical variables.
+- **Spearman Correlation:** Used to measure the strength of monotonic relationships between numerical variables.
+- **95% Confidence Interval:** Used to estimate the population mean age.
+- **Covariance:** Used to examine how two numerical variables vary together.
 
-## 📈 Key Results
+## Key Results
 
 | Test | Statistic | p-value | Decision |
 | --- | --- | --- | --- |
-| One-proportion Z-test (prevalence = 0.25) | z = 4.714 | 2.4 × 10⁻⁶ | Reject H₀ |
-| Two-proportion Z-test (smoker vs non-smoker) | z = 6.744 | 1.6 × 10⁻¹¹ | Reject H₀ |
-| Welch's t-test (glucose by diabetes status) | t ≈ 36.0 | < 1 × 10⁻¹⁰⁰ | Reject H₀ |
-| Chi-square test (smoking × diabetes) | χ² = 58.05 | 2.5 × 10⁻¹³ | Reject H₀ |
-| One-way ANOVA (blood pressure by age group) | F ≈ 63 | < 1 × 10⁻³⁰ | Reject H₀ |
-| Pearson correlation (age vs BMI) | r = 0.02 | 0.62 | Fail to reject H₀ |
-| Pearson correlation (BMI vs blood pressure) | r = 0.36 | ≈ 1 × 10⁻²⁰ | Reject H₀ |
+| One-Proportion Z-Test (diabetes prevalence = 0.25) | z = -10.535 | Approximately 0 | Reject H₀ |
+| Two-Proportion Z-Test (smoker vs non-smoker) | z = 1.090 | 0.27586 | Fail to Reject H₀ |
+| Welch's t-Test (glucose by diabetes status) | t = 3.911 | 0.0007 | Reject H₀ |
+| Chi-Square Test (smoking status × diabetes) | χ² = 1.184 | 0.5533 | Fail to Reject H₀ |
+| One-Way ANOVA (blood pressure by age group) | F = 45.730 | 1.0693 × 10⁻³² | Reject H₀ |
+| Pearson Correlation (age vs BMI) | r = -0.019 | 0.6749 | Fail to Reject H₀ |
+| Pearson Correlation (BMI vs blood pressure) | r = 0.458 | 2.604 × 10⁻²⁷ | Reject H₀ |
+| Pearson Correlation (age vs blood pressure) | r = 0.551 | 5.069 × 10⁻⁴¹ | Reject H₀ |
+| Pearson Correlation (cholesterol vs blood pressure) | r = 0.442 | 2.403 × 10⁻²⁵ | Reject H₀ |
 
-## Additional Findings
-
-- **Diabetes Probability Among Smokers:** 0.450 (45.0%)
-- **Diabetes Probability Among Non-Smokers:** 0.160 (16.0%)
-- **95% Confidence Interval for Diabetes Prevalence:** (0.296, 0.371)
-- **Cramér's V:** 0.311, indicating a moderate association between smoking status and diabetes.
 
 ## 📂 Dataset Description
 
